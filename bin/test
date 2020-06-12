@@ -1,0 +1,11 @@
+#!/bin/bash
+
+URL=$(gcloud run services describe badger \
+  --platform managed \
+  --region us-east1 \
+  --format 'value(status.url)')
+
+curl ${URL}/test/build/status -d 'project=test' -d 'id=failure'
+curl ${URL}/test/build/status -d 'project=test' -d 'id=working'
+curl ${URL}/test/build/status -d 'project=test' -d 'id=success'
+curl ${URL}/test/build/status -d 'project=test' -d 'id=unknown'
