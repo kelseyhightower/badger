@@ -12,7 +12,7 @@ gcloud iam service-accounts describe $sa --project $project &> /dev/null
 
 if [ $? -ne 0 ]; then
   echo "creating badger service account: $sa"
-  gcloud iam service-accounts create $sa \
+  gcloud iam service-accounts create badger \
     --display-name="badger" \
     --project=$project
     
