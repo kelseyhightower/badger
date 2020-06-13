@@ -16,8 +16,8 @@ if [ $? -ne 0 ]; then
     --display-name="badger" \
     --project=$project
     
-  echo "waiting 30 seconds for service account consistency"
-  sleep 30
+  echo "waiting 60 seconds for service account consistency"
+  sleep 60
 fi
 
 echo "allowing $sa to view cloud builds"
