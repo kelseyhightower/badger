@@ -23,7 +23,7 @@ fi
 echo "allowing $sa to view cloud builds"
 gcloud projects add-iam-policy-binding $project \
   --member=serviceAccount:$sa \
-  ---role=roles/cloudbuild.builds.viewer &> /dev/null
+  --role=roles/cloudbuild.builds.viewer &> /dev/null
 
 echo "updating $service to use the service account $sa"
 gcloud run services update $service \
