@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -euo pipefail
 set -x
 
 declare project=$GOOGLE_CLOUD_PROJECT
