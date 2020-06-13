@@ -81,7 +81,7 @@ gcloud run deploy badger \
   --image gcr.io/hightowerlabs/badger:0.0.1 \
   --memory '128Mi' \
   --platform managed \
-  --region us-west1
+  --region us-central1
 ```
 
 ### Test the Installation
@@ -91,7 +91,7 @@ Retrieve the badger Cloud Run service url:
 ```
 BADGER_ENDPOINT=$(gcloud run services describe badger \
   --platform managed \
-  --region us-east1 \
+  --region us-central1 \
   --format 'value(status.url)')
 ```
 
