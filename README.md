@@ -44,7 +44,7 @@ https://badger-6bn2iswfgq-ue.a.run.app/build/status?project=hightowerlabs&id=1c9
 Use the following [markdown syntax](https://guides.github.com/features/mastering-markdown/) to display build status images in your README files. In the following example the project id is `hightowerlabs` and the trigger id is `1c96a91a-bb98-49d8-b43a-c76173a13ff8`.
 
 ```
-![CloudBuild](https://badger-6bn2iswfgq-ue.a.run.app/build/status?project=1c96a91a-bb98-49d8-b43a-c76173a13ff8)
+![CloudBuild](https://badger-6bn2iswfgq-ue.a.run.app/build/status?project=hightowerlabs&id=1c96a91a-bb98-49d8-b43a-c76173a13ff8)
 ```
 ![CloudBuild](https://badger-6bn2iswfgq-ue.a.run.app/build/status?project=hightowerlabs&id=1c96a91a-bb98-49d8-b43a-c76173a13ff8)
 
