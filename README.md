@@ -29,7 +29,7 @@ Retrieve the service URL associated with your `badger` deployment:
 ```
 BADGER_ENDPOINT=$(gcloud run services describe badger \
   --platform managed \
-  --region us-east1 \
+  --region us-central1 \
   --format 'value(status.url)')
 ```
 
