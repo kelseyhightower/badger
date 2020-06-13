@@ -1,0 +1,9 @@
+{
+  "hooks": {
+    "postcreate": {
+      "commands": [
+        ".gcloud/post-create.sh"
+      ]
+    }
+  }
+}
