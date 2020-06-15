@@ -81,7 +81,7 @@ gcloud run deploy badger \
   --image gcr.io/hightowerlabs/badger:0.0.1 \
   --memory '128Mi' \
   --platform managed \
-  --region us-west1
+  --region us-east1
 ```
 
 ### Test the Installation
