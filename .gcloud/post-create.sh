@@ -6,19 +6,14 @@ declare project=$GOOGLE_CLOUD_PROJECT
 declare service=$K_SERVICE
 declare region=$GOOGLE_CLOUD_REGION
 
-declare sa=badger@$project.iam.gserviceaccount.com
+# service accounts once deleted should not be reused so we make it unique(ish)
+declare name=badger-$(cat /dev/urandom|tr -dc '0-9'|fold -w 4|head -n 1)
+declare sa=$name@$project.iam.gserviceaccount.com
 
-gcloud iam service-accounts describe $sa --project $project &> /dev/null
-
-if [ $? -ne 0 ]; then
-  echo "creating badger service account: $sa"
-  gcloud iam service-accounts create badger \
-    --display-name="badger" \
-    --project=$project
-    
-  echo "waiting 60 seconds for service account consistency"
-  sleep 60
-fi
+echo "creating badger service account: $sa"
+gcloud iam service-accounts create $name \
+  --display-name="badger" \
+  --project=$project
 
 echo "allowing $sa to view cloud builds"
 gcloud projects add-iam-policy-binding $project \
