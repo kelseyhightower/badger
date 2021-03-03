@@ -48,7 +48,11 @@ Use the following [markdown syntax](https://guides.github.com/features/mastering
 ```
 ![CloudBuild](https://badger-6bn2iswfgq-ue.a.run.app/build/status?project=hightowerlabs&id=1c96a91a-bb98-49d8-b43a-c76173a13ff8)
 
-## Install
+## Click to Deploy on Cloud Run
+
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
+## Manual Install
 
 This section will walk you through deploying the badger service to [Cloud Run](https://cloud.google.com/run).
 
